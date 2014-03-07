@@ -33,3 +33,18 @@ That's all she wrote up to this point.
 1.  Run `npm install`
 1.  Run `node app/index.js`
 1.  Navigate to localhost:4000/
+
+
+# References
+
+[Session]
+[Postgres]
+[NodePool]
+[Passport]
+[AuthExample]
+
+[Session]: http://blog.modulus.io/nodejs-and-express-sessions "Session Stuff"
+[Postgres]: https://github.com/brianc/node-postgres/wiki/Client
+[NodePool]: https://github.com/coopernurse/node-pool "generic-pool"
+[Passport]: http://passportjs.org/
+[AuthExample]: https://github.com/visionmedia/express/blob/master/examples/auth/app.js
