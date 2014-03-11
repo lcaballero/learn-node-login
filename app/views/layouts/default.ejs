@@ -2,13 +2,19 @@
 <html>
 <head>
     <title><%- title %></title>
-    <% include default-css.ejs -%>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/calendars.css">
 </head>
 <body>
 <%- body -%>
 
 <% include ../partials/calendars.ejs -%>
-<% include default-js.ejs -%>
+
+<script src="/js/libs/angular.js"></script>
+<script src="/js/libs/moment.min.js"></script>
+<script src="/js/libs/lodash.js"></script>
+<script src="/js/controllers/HomeCtrl.js"></script>
 
 </body>
 </html>
