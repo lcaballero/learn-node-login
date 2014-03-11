@@ -1,19 +1,17 @@
-<div class="main-container">
-    <div class="calendars" ng-app="CalendarApp" ng-controller="CalendarCtrl">
-        <div id="cal1" class="calendar" ng-repeat="cal in calendars">
-            <b>{{ cal.thisMonth.format("MMMM") }}</b>
-            <table>
-                <thead>
-                    <tr>
-                        <th ng-repeat="day in cal.daysOfTheWeek">{{ day }}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="week in cal.weeks">
-                        <td ng-repeat="day in week">{{ day.format("D") }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<div class="calendars">
+    <div id="cal1" class="calendar" ng-repeat="cal in calendars">
+        <b>{{ cal.thisMonth.format("MMMM") }}</b>
+        <table>
+            <thead>
+                <tr>
+                    <th ng-repeat="day in cal.daysOfTheWeek">{{ day }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="week in cal.weeks">
+                    <td ng-repeat="day in week">{{ day.format("D") }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

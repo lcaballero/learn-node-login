@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="/css/calendars.css">
 </head>
 <body>
+
     <%- body -%>
+    <div class="main-container" ng-app="CalendarApp" ng-controller="CalendarCtrl">
+        <div>
+            <b>Don't break the chain!</b>
+        </div>
+        <% include ../partials/calendars.ejs -%>
+        <% include ../partials/range-selection.ejs -%>
+    </div>
 
     <script src="/js/libs/angular.js"></script>
     <script src="/js/libs/moment.min.js"></script>
     <script src="/js/libs/lodash.js"></script>
+    <script src="/js/apps/CalendarApp.js"></script>
+    <script src="/js/services/CalendarDays.js"></script>
     <script src="/js/controllers/HomeCtrl.js"></script>
 
 </body>

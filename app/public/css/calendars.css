@@ -28,3 +28,24 @@
 .calendar + .calendar {
     margin-top: 10px;
 }
+
+li, dt, ul, ol {
+    margin:0;
+    padding:0;
+}
+
+.range-selection {
+    margin-top: 10px;
+    margin-left: 22px;
+}
+.range-selection li:first-child {
+    border-left: 1px solid #111;
+}
+.range-selection li {
+    list-style: none;
+    float:left;
+    padding: 8px;
+    border-right: 1px solid #111;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
