@@ -37,15 +37,22 @@ module.exports = function (app, config, ConnectionPool) {
         ],
         home: [
             function(req, res, next) {
-                res.locals.title = 'hello world 2';
+                res.locals.title = 'Dashboard';
                 res.render('pages/home');
             }
         ],
         login: [
             function(req, res, next) {
-                res.locals.title = 'hello world 2';
+                res.locals.title = 'Login';
                 res.render('pages/login');
             }
+        ],
+        register: [
+            function(req, res, next) {
+                res.locals.title = 'Register';
+                res.render('pages/register');
+            }
         ]
+
     };
 };

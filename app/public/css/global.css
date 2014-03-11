@@ -1,5 +1,13 @@
-
+body {
+    font-family: Arial;
+    font-size: 12px;
+}
 
 .content {
     margin-top: 42px;
+}
+
+.main-container {
+    width:  380px;
+    height: 480px;
 }
