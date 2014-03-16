@@ -1,0 +1,12 @@
+<script type="text/ng-template" id="slide-out-menu">
+<div class="slide-out-menu">
+    <i ng-click="showMenu( $event )" class="icon-{{icon}}"></i>
+    <div class="slide-content">
+        <ul>
+            <li ng-repeat="m in menu">
+                <div ng-click="triggerMenu( m )" data-setting="{{ m.setting }}">{{ m.name }}</div>
+            </li>
+        </ul>
+    </div>
+</div>
+</script>

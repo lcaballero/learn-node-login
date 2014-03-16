@@ -1,0 +1,28 @@
+.chain-details label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.chain-details .fields {
+    margin: 12px;
+}
+
+.chain-details .fields button {
+    margin:0px;
+    float: right;
+    cursor: pointer;
+}
+
+.chain-details .fields input[type='text'] {
+    margin: 0;
+    width: 290px;
+}
+
+.chain-details .fields textarea {
+    margin: 0;
+    width: 290px;
+}
+
+.chain-details .fields > input+label {
+    margin-top: 8px;
+}

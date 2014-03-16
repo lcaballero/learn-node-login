@@ -9,7 +9,10 @@
             </thead>
             <tbody>
                 <tr ng-repeat="week in cal.weeks">
-                    <td ng-repeat="day in week">{{ day.format("D") }}</td>
+                    <td ng-repeat="day in week"
+                        ng-class="{ active : isChecked(cal, day) }">
+                        <div ng-click="crossOffDay( cal, day )">{{ day.format('D') }}</div>
+                    </td>
                 </tr>
             </tbody>
         </table>

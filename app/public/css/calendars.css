@@ -1,7 +1,9 @@
-.calendars {
-    width:100%;
-    margin: 0 auto;
-    width: 290px;
+.main-container {
+    border: 1px solid #ccc;
+}
+
+.calendar table {
+    margin: 0px 19px;
 }
 
 .calendar thead th {
@@ -13,20 +15,25 @@
 }
 
 .calendar tbody td {
-    width: 40px;
+    width: 42px;
     text-align: center;
 
     border: 1px solid #ccc;
     padding:2px 0px;
+
+    cursor: pointer;
+}
+
+.calendar tbody td.active {
+    background-color: #f00;
+    color: #fff;
 }
 
 .calendar > b {
     display: block;
     text-align: center;
-}
-
-.calendar + .calendar {
     margin-top: 10px;
+    margin-bottom: 4px;
 }
 
 li, dt, ul, ol {
@@ -34,18 +41,56 @@ li, dt, ul, ol {
     padding:0;
 }
 
-.range-selection {
-    margin-top: 10px;
-    margin-left: 22px;
+.calendars.container ul {
+    width:100%;
 }
+
 .range-selection li:first-child {
-    border-left: 1px solid #111;
+    border-left: 1px solid #ccc;
 }
+
+.range-selection ul {
+    display: inline-block;
+    margin-top: 4px;
+}
+
 .range-selection li {
     list-style: none;
-    float:left;
+    float: left;
     padding: 8px;
-    border-right: 1px solid #111;
-    border-top: 1px solid #111;
-    border-bottom: 1px solid #111;
+    width: 79px;
+    text-align:center;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.range-selection li.active {
+    background-color: #000;
+    color: #fff;
+}
+
+/**********/
+.header-bar {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.header-bar > b {
+    font-size: 21px;
+    margin-left: 38px;
+}
+
+.header-bar.center > b {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.header-bar .icon-arrow-left {
+    font-size:24px;
+    position: absolute;
+    top: 5px;
+    left: 3px;
 }

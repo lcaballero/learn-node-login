@@ -1,5 +1,56 @@
 <% layout('../layouts/home') -%>
 
-<a href="/logout">Logout</a>
+<div class="main-container" ng-app="CalendarApp" ng-controller="CalendarCtrl">
+
+    <div class="calendars container" ng-if="isView('home')">
+
+        <div slide-out-menu slide-out-menu-icon="menu2"></div>
+
+        <div class="header-bar">
+            <b>{{ activeChain.name }}</b>
+        </div>
+
+        <% include ../partials/calendars.ejs -%>
+
+    </div>
+
+    <div class="first-chain chain-details" ng-if="isView('first-chain')" >
+        <div class="header-bar center">
+            <b>Create First Chain</b>
+        </div>
+
+        <div class="fields">
+            <label>Name:</label>
+            <input type="text" value="" width="300px"/>
+            <label>Description:</label>
+            <textarea cols="39" rows="20"></textarea>
+            <div>
+                <button type="submit">Save and Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="create-chain chain-details" ng-if="isView('create-chain')">
+
+        <div slide-out-menu slide-out-menu-icon="arrow-left"></div>
+
+        <div class="header-bar center">
+            <b>Create New Chain</b>
+        </div>
+
+        <div class="fields">
+            <label>Name:</label>
+            <input type="text" value="" width="300px"/>
+            <label>Description:</label>
+            <textarea cols="39" rows="20"></textarea>
+            <div>
+                <button type="submit">Save and Start</button>
+            </div>
+        </div>
+    </div>
+
+    <% include ../partials/slide-out-menu.ejs -%>
+
+</div>
 
 

@@ -5,23 +5,26 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/calendars.css">
+    <link rel="stylesheet" href="/icomoon/style.css">
+    <link rel="stylesheet" href="/css/slide-out-menu.css">
+    <link rel="stylesheet" href="/css/first-chain.css">
 </head>
 <body>
 
     <%- body -%>
-    <div class="main-container" ng-app="CalendarApp" ng-controller="CalendarCtrl">
-        <div>
-            <b>Don't break the chain!</b>
-        </div>
-        <% include ../partials/calendars.ejs -%>
-        <% include ../partials/range-selection.ejs -%>
-    </div>
 
     <script src="/js/libs/angular.js"></script>
+    <script src="/js/libs/ngStorage.js"></script>
     <script src="/js/libs/moment.min.js"></script>
     <script src="/js/libs/lodash.js"></script>
+
     <script src="/js/apps/CalendarApp.js"></script>
+    <script src="/js/constants/DateRanges.js"></script>
     <script src="/js/services/CalendarDays.js"></script>
+    <script src="/js/services/CalendarData.js"></script>
+    <script src="/js/services/Uuid.js"></script>
+    <script src="/js/services/User.js"></script>
+    <script src="/js/directives/SlideOutMenu.js"></script>
     <script src="/js/controllers/HomeCtrl.js"></script>
 
 </body>

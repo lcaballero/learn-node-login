@@ -7,7 +7,7 @@ angular.module("CalendarApp").service("CalendarDays", function() {
         var lastSunday  = opts.lastSunday;
 
         return {
-            month: "March",
+            month: thisMonth.format("MMMM"),
             daysOfTheWeek: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
             weeks: (function(){
                 var d = moment(firstSunday);
@@ -65,8 +65,8 @@ angular.module("CalendarApp").service("CalendarDays", function() {
             firstSunday :   start.firstSunday,
             monthStart  :   start.monthStart,
             thisMonth   :   m,
-            lastSunday  :   end.lastSunday,
-            monthEnd    :   end.monthEnd
+            lastSunday  :   last.lastSunday,
+            monthEnd    :   last.monthEnd
         };
     };
 

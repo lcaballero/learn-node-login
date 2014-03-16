@@ -3,11 +3,31 @@ body {
     font-size: 12px;
 }
 
+.none {
+    display: none;
+}
+
+.translucent {
+    opacity: 0;
+}
+
 .content {
     margin-top: 42px;
 }
 
 .main-container {
-    width:  380px;
+    /* These are the iphone 4s dimensions */
+    width:  320px;
     height: 480px;
+
+    /*
+    These are the iphone 5 dimensions
+        width: 320px;
+        height: 568px;
+    */
+}
+
+[class*='icon-'] {
+    font-size: 32px;
+    cursor: pointer;
 }

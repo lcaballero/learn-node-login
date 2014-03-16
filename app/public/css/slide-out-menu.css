@@ -1,0 +1,48 @@
+.slide-out-menu {
+    float:left;
+    width: 33px;
+    height: 33px;
+
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+
+    background-color: #fff;
+
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+
+    transition: width .25s linear 0s, height .25s linear 0s;
+}
+
+.slide-out-menu .icon-menu2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    transition: left .25s linear 0s;
+}
+
+.slide-out-menu .slide-content.open {
+    opacity: 1;
+}
+.slide-out-menu .slide-content {
+    position: absolute;
+    top: 33px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slide-out-menu li {
+    font-size: 21px;
+    line-height: 32px;
+    padding: 6px 0px;
+    border-bottom: 1px solid #ccc;
+}
+.slide-out-menu li div {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
