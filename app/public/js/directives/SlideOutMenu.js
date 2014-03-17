@@ -52,11 +52,12 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
             console.log('fec2', el[0].firstElementChild.firstElementChild);
             console.log('fec3', el[0].firstElementChild.firstElementChild.nextElementSibling);
 
-            angular.element(el[0].firstElementChild.firstElementChild.nextElementSibling).bind(
+            var slideContent = el[0].firstElementChild.firstElementChild.nextElementSibling
+            slideContent.style.display = 'none';
+
+            angular.element(slideContent).bind(
                 'transitionend', function() {
-                    console.log('transition end');
                     if (!isOpen && !!content) {
-                        console.log('transition end - adding none');
                         content.style.display = 'none'
                     }
                 });

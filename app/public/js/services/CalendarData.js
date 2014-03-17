@@ -47,8 +47,7 @@ angular.module("CalendarData").service("CalendarData", function($localStorage, U
     function defaultCalendars() {
         return [
             defaultCalendar(moment().subtract('month', 1).startOf('month').valueOf()),
-            defaultCalendar(moment().startOf('month').valueOf()),
-            defaultCalendar(moment().add('month', 1).startOf('month').valueOf())
+            defaultCalendar(moment().startOf('month').valueOf())
         ];
     };
 

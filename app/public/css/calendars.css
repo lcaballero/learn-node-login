@@ -16,7 +16,9 @@
 
 .calendar tbody td {
     width: 42px;
+    height: 26px;
     text-align: center;
+    vertical-align: middle;
 
     border: 1px solid #ccc;
     padding:2px 0px;

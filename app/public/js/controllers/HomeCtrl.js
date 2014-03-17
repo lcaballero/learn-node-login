@@ -24,7 +24,7 @@ angular.module("CalendarApp").controller("CalendarCtrl", function(
             var m = CalendarDays.createMonths(moment(cal.date));
             var w = CalendarDays.createWeeks(m);
 
-            w.date      = w.thisMonth.format("YYYY-MM-D")
+            w.date      = w.thisMonth.format("YYYY-MM-D");
             w.checked    = convertDayBits(cal.checked);
             w.skipped   = convertDayBits(cal.skipped);
 
