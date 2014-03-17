@@ -16,7 +16,7 @@
     transition: width .25s linear 0s, height .25s linear 0s;
 }
 
-.open .slide-out-menu {
+.open.shadowed .slide-out-menu {
     box-shadow: 3px -2px 14px #6C6C6C;
 }
 
@@ -31,12 +31,14 @@
 .open .slide-out-menu .slide-content {
     opacity: 1;
 }
+.closed .slide-out-menu .slide-content {
+    opacity: 0;
+}
 .slide-out-menu .slide-content {
     position: absolute;
     top: 33px;
     border-top: 1px solid #ccc;
     width: 100%;
-    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 .slide-out-menu li {

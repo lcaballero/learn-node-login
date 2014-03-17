@@ -7,8 +7,6 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
         scope       : {},
         link        : function(scope, el, attrs) {
 
-            console.log(el);
-
             scope.icon = attrs.slideOutMenuIcon;
             scope.menu = [
                 { name: 'Chain List',   setting: 'chain-list',      icon: 'list' },
@@ -24,12 +22,14 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
             };
 
             var isOpen = false;
+            var icon = el[0].firstElementChild.firstElementChild
+            var slideContent = icon.nextElementSibling;
+            slideContent.style.display = 'none';
 
             scope.showMenu = function(ev) {
 
                 var src = ev.srcElement;
                 var p = src.parentNode;
-                var ct = src.nextElementSibling;
 
                 isOpen = !isOpen;
 
@@ -37,8 +37,8 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
                     src.style.left = "250px";
                     p.style.height = "480px";
                     p.style.width = '285px';
-                    ct.style.display = 'block';
-                    el.addClass('open').removeClass('closed');
+                    slideContent.style.display = 'block';
+                    el.removeClass('closed').addClass('open');
                 } else {
                     src.style.left = "0px";
                     p.style.height = "33px";
@@ -47,13 +47,18 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
                 }
             };
 
-            var slideContent = el[0].firstElementChild.firstElementChild.nextElementSibling
-            slideContent.style.display = 'none';
+            angular.element(icon).bind('transitionend', function() {
+                console.log(slideContent);
+                if (isOpen) {
+                    el.addClass('shadowed');
+                }
+            })
 
             angular.element(slideContent).bind(
                 'transitionend', function() {
-                    if (!isOpen && !!content) {
-                        content.style.display = 'none'
+                    if (!isOpen) {
+                        slideContent.style.display = 'none';
+                        el.removeClass('shadowed');
                     }
                 });
         }
