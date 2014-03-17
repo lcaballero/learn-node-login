@@ -20,17 +20,16 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
 
             scope.triggerMenu = function( setting ) {
                 console.log(setting);
+                console.log(el);
             };
 
             var isOpen = false;
-            var content = null;
 
             scope.showMenu = function(ev) {
 
                 var src = ev.srcElement;
                 var p = src.parentNode;
                 var ct = src.nextElementSibling;
-                content = ct;
 
                 isOpen = !isOpen;
 
@@ -39,18 +38,14 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
                     p.style.height = "480px";
                     p.style.width = '285px';
                     ct.style.display = 'block';
-                    ct.className = 'slide-content open';
+                    el.addClass('open').removeClass('closed');
                 } else {
                     src.style.left = "0px";
                     p.style.height = "33px";
                     p.style.width = '33px';
-                    ct.className = 'slide-content closed';
+                    el.addClass('closed').removeClass('open');
                 }
             };
-
-            console.log('fec1', el[0].firstElementChild);
-            console.log('fec2', el[0].firstElementChild.firstElementChild);
-            console.log('fec3', el[0].firstElementChild.firstElementChild.nextElementSibling);
 
             var slideContent = el[0].firstElementChild.firstElementChild.nextElementSibling
             slideContent.style.display = 'none';

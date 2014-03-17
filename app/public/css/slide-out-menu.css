@@ -16,6 +16,10 @@
     transition: width .25s linear 0s, height .25s linear 0s;
 }
 
+.open .slide-out-menu {
+    box-shadow: 3px -2px 14px #6C6C6C;
+}
+
 .slide-out-menu .icon-menu2 {
     position: absolute;
     left: 0px;
@@ -24,7 +28,7 @@
     transition: left .25s linear 0s;
 }
 
-.slide-out-menu .slide-content.open {
+.open .slide-out-menu .slide-content {
     opacity: 1;
 }
 .slide-out-menu .slide-content {
