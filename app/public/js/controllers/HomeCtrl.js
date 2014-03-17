@@ -37,22 +37,34 @@ angular.module("CalendarApp").controller("CalendarCtrl", function(
         return d;
     };
 
-    $scope.chains = $scope.$storage.chains;
-    $scope.activeChain = $scope.chains[0];
+    function isMonth(cal, day) {
+        return cal.month == day.format("MMMM");
+    };
+
+    $scope.chains       = $scope.$storage.chains;
+    $scope.activeChain  = $scope.chains[0];
     $scope.calendars    = centerCalendars($scope.activeChain.calendars);
 
-    $scope.isChecked    = function(cal, day) {
-        var isMonth = cal.month == day.format("MMMM");
+    $scope.isInMonth = function(cal, day) {
+        var isThisMonth = isMonth(cal, day);
+        var d = dayOfTheMonth(day);
+        return !isNaN(d) && isThisMonth;
+    };
+
+    $scope.isChecked = function(cal, day) {
+        var isThisMonth = isMonth(cal, day);
         var d = dayOfTheMonth(day);
         var isDay = isNaN(d) ? false : cal.checked[d];
-        return isMonth && isDay;
+        return isThisMonth && isDay;
     };
 
     $scope.crossOffDay  = function(cal, day) {
+        if (!$scope.isInMonth(cal, day)) {
+            return;
+        }
         var d = dayOfTheMonth(day);
         cal.checked[d] = true;
     };
-
 
     var views = {
         home        : 'home',

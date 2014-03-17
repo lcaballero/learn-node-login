@@ -24,9 +24,14 @@
     cursor: pointer;
 }
 
-.calendar tbody td.active {
+.calendar tbody td.checked {
     background-color: #f00;
     color: #fff;
+}
+
+.calendar tbody td.disabled {
+    background-color: #eee;
+    color: #999;
 }
 
 .calendar > b {
