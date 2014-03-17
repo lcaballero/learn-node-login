@@ -49,6 +49,7 @@
     left: 9px;
 }
 .slide-out-menu li div {
+    width: 285px;
     margin-left: 34px;
     cursor: pointer;
 }
