@@ -4,7 +4,8 @@
     <div class="slide-content">
         <ul>
             <li ng-repeat="m in menu">
-                <div ng-click="triggerMenu( m )" data-setting="{{ m.setting }}">{{ m.name }}</div>
+                <i class="icon-{{ m.icon }}"></i>
+                <div ng-click="triggerMenu( m )">{{ m.name }}</div>
             </li>
         </ul>
     </div>

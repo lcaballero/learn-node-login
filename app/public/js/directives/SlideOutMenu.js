@@ -11,11 +11,11 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
 
             scope.icon = attrs.slideOutMenuIcon;
             scope.menu = [
-                { name: 'Chain List', setting: 'chain-list' },
-                { name: 'New Chain', setting: 'new-chain' },
-                { name: 'Stats', setting: 'stats' },
-                { name: 'Achievements', setting: 'achievements' },
-                { name: 'Settings', setting: 'settings' }
+                { name: 'Chain List',   setting: 'chain-list',      icon: 'list' },
+                { name: 'New Chain',    setting: 'new-chain',       icon: 'newtab' },
+                { name: 'Stats',        setting: 'stats',           icon: 'stats' },
+                { name: 'Achievements', setting: 'achievements',    icon: 'shield' },
+                { name: 'Settings',     setting: 'settings',        icon: 'cog2' }
             ];
 
             scope.triggerMenu = function( setting ) {
