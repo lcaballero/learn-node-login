@@ -49,11 +49,14 @@ angular.module("SlideOutMenu").directive("slideOutMenu", function() {
             };
 
             console.log('fec1', el[0].firstElementChild);
-            console.log('fec2', el[0].firstElementChild.nextElementSibling);
+            console.log('fec2', el[0].firstElementChild.firstElementChild);
+            console.log('fec3', el[0].firstElementChild.firstElementChild.nextElementSibling);
 
-            angular.element(el[0].firstElementChild.nextElementSibling).bind(
+            angular.element(el[0].firstElementChild.firstElementChild.nextElementSibling).bind(
                 'transitionend', function() {
+                    console.log('transition end');
                     if (!isOpen && !!content) {
+                        console.log('transition end - adding none');
                         content.style.display = 'none'
                     }
                 });
