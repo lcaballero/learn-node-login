@@ -3,7 +3,7 @@
 }
 
 .calendar table {
-    margin: 0px 19px;
+    margin: 0px 9px;
 }
 
 .calendar thead th {
@@ -15,8 +15,6 @@
 }
 
 .calendar tbody td {
-    width: 42px;
-    height: 26px;
     text-align: center;
     vertical-align: middle;
 
@@ -24,6 +22,12 @@
     padding:2px 0px;
 
     cursor: pointer;
+}
+
+.calendar tbody td div {
+    width: 42px;
+    height: 26px;
+    line-height: 26px;
 }
 
 .calendar tbody td.checked {
